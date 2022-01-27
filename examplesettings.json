@@ -1,0 +1,470 @@
+{
+    "name": "default",
+    "starts": "E000",
+    "ranges": 
+    [
+        {
+            "type": "raw",
+            "skips": 256,
+            "provider":
+            {
+                "type": "bitmap",
+                "file": "xmzs:bedrock_glyphs/e0.png",
+                "ascent": 11,
+                "height": 16,
+                "chars": [
+                    "\ue000\ue001\ue002\ue003\ue004\ue005\ue006\ue007\ue008\ue009\ue00a\ue00b\ue00c\ue00d\ue00e\ue00f",
+                    "\ue010\ue011\ue012\ue013\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+                    "\ue020\ue021\ue022\ue023\ue024\ue025\ue026\ue027\ue028\ue029\ue02a\ue02b\ue02c\ue02d\ue02e\ue02f",
+                    "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+                    "\ue040\ue041\ue042\ue043\ue044\ue045\ue046\ue047\ue048\ue049\ue04a\ue04b\ue04c\ue04d\ue04e\ue04f",
+                    "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+                    "\ue060\ue061\ue062\ue063\u0000\ue065\ue066\ue067\ue068\ue069\ue06a\ue06b\ue06c\ue06d\ue06e\ue06f",
+                    "\ue070\ue071\ue072\ue073\u0000\ue075\ue076\ue077\ue078\ue079\ue07a\ue07b\ue07c\ue07d\ue07e\ue07f",
+                    "\ue080\ue081\ue082\ue083\ue084\ue085\ue086\ue087\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+                    "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+                    "\ue0a0\ue0a1\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+                    "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+                    "\ue0c0\ue0c1\ue0c2\ue0c3\ue0c4\ue0c5\ue0c6\ue0c7\ue0c8\ue0c9\ue0ca\ue0cb\ue0cc\ue0cd\u0000\u0000",
+                    "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+                    "\ue0e0\ue0e1\ue0e2\ue0e3\ue0e4\ue0e5\ue0e6\ue0e7\ue0e8\ue0e9\ue0ea\u0000\u0000\u0000\u0000\u0000",
+                    "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"
+                ]
+            }
+        },
+        {
+            "type": "raw",
+            "skips": 256,
+            "provider":
+            {
+                "type": "bitmap",
+                "file": "xmzs:bedrock_glyphs/e1.png",
+                "ascent": 11,
+                "height": 16,
+                "chars":
+                [
+                    "\ue100\ue101\ue102\ue103\ue104\ue105\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+                    "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+                    "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+                    "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+                    "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+                    "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+                    "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+                    "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+                    "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+                    "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+                    "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+                    "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+                    "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+                    "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+                    "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+                    "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"
+                ]
+            }
+        },
+        {
+            "type": "raw",
+            "skips": 256,
+            "provider":
+            {
+                "type": "bitmap",
+                "file": "minecraft:map/map_icons.png",
+                "ascent": 7,
+                "chars": [
+                    "\ue200\ue201\ue202\ue203\ue204\ue205\ue206\ue207\ue208\ue209\ue20a\ue20b\ue20c\ue20d\ue20e\ue20f",
+                    "\ue210\ue211\ue212\ue213\ue214\ue215\ue216\ue217\ue218\ue219\ue21a\u0000\u0000\u0000\u0000\u0000",
+                    "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+                    "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+                    "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+                    "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+                    "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+                    "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+                    "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+                    "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+                    "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+                    "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+                    "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+                    "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+                    "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+                    "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"
+                ]
+            }
+        },
+        {
+            "prefix": "item/music_disc_",
+            "values":
+            [
+                "11", "13", "blocks", "cat", "chirp",
+                "far", "mall", "mellohi", "otherside",
+                "pigstep", "stal", "strad", "wait", "ward"
+            ]
+        },
+        //工具和武器
+        {
+            "prefix": "item/wooden_",
+            "values":
+            [
+                "axe", "hoe", "pickaxe", "shovel", "sword"
+            ]
+        },
+        {
+            "prefix": "item/stone_",
+            "values":
+            [
+                "axe", "hoe", "pickaxe", "shovel", "sword"
+            ]
+        },
+        {
+            "prefix": "item/iron_",
+            "values":
+            [
+                "axe", "hoe", "pickaxe", "shovel", "sword"
+            ]
+        },
+        {
+            "prefix": "item/golden_",
+            "values":
+            [
+                "axe", "hoe", "pickaxe", "shovel", "sword"
+            ]
+        },
+        {
+            "prefix": "item/diamond_",
+            "values":
+            [
+                "axe", "hoe", "pickaxe", "shovel", "sword"
+            ]
+        },
+        {
+            "prefix": "item/netherite_",
+            "values":
+            [
+                "axe", "hoe", "pickaxe", "shovel", "sword"
+            ]
+        },
+        //其他工具
+        {
+            "prefix": "item/",
+            "values":
+            [
+                "elytra", "broken_elytra",
+                "fishing_rod", "flint_and_steel",
+                "shears", "spyglass"
+            ]
+        },
+        //其他武器
+        {
+            "prefix": "item/",
+            "values":
+            [
+                "bow", "crossbow_standby", "crossbow_firework",
+                "trident"
+            ]
+        },
+        //防具
+        {
+            "prefix": "item/iron_",
+            "values":
+            [
+                "boots", "leggings", "chestplate", "helmet"
+            ]
+        },
+        {
+            "prefix": "item/golden_",
+            "values":
+            [
+                "boots", "leggings", "chestplate", "helmet"
+            ]
+        },
+        {
+            "prefix": "item/diamond_",
+            "values":
+            [
+                "boots", "leggings", "chestplate", "helmet"
+            ]
+        },
+        {
+            "prefix": "item/netherite_",
+            "values":
+            [
+                "boots", "leggings", "chestplate", "helmet"
+            ]
+        },
+        {
+            "prefix": "item/chainmail_",
+            "values":
+            [
+                "boots", "leggings", "chestplate", "helmet"
+            ]
+        },
+        {
+            "namespace": "xmzs",
+            "prefix": "item/leather_",
+            "values":
+            [
+                "boots", "leggings", "chestplate", "helmet"
+            ]
+        },
+        {
+            "prefix": "item/",
+            "values": [ "turtle_helmet" ]
+        },
+        //交通运输
+        {
+            "prefix": "block/",
+            "suffix": "rail",
+            "values":
+            [
+                "", "powered_", "detector_", "activator_"
+            ]
+        },
+        {
+            "prefix": "item/",
+            "values":
+            [
+                "saddle", "minecart", "chest_minecart",
+                "furnace_minecart", "tnt_minecart",
+                "hopper_minecart", "command_block_minecart",
+                "oak_boat", "spruce_boat", "birch_boat",
+                "jungle_boat", "acacia_boat", "dark_oak_boat",
+                "carrot_on_a_stick", "warped_fungus_on_a_stick"
+            ]
+        },
+        //矿物
+        {
+            "prefix": "item/",
+            "values":
+            [
+                "amethyst_shard", "coal", "copper_ingot",
+                "diamond", "emerald", "gold_ingot", "iron_ingot",
+                "lapis_lazuli", "netherite_ingot",
+                "netherite_scrap", "quartz", "raw_copper", "raw_gold",
+                "raw_iron", "gold_nugget", "iron_nugget"
+            ]
+        },
+        //蜡烛
+        {
+            "prefix": "item/",
+            "suffix": "candle",
+            "values":
+            [
+                "", "black_", "blue_",
+                "brown_", "cyan_", "gray_",
+                "green_", "light_blue_", "light_gray_",
+                "lime_", "magenta_", "orange_",
+                "pink_", "purple_", "red_", "white_",
+                "yellow_"
+            ]
+        },
+        //马铠
+        {
+            "prefix": "item/",
+            "suffix": "_horse_armor",
+            "values":
+            [
+                "leather", "iron", "golden", "diamond"
+            ]
+        },
+        //酿造
+        {
+            "prefix": "item/",
+            "values":
+            [
+                "brewing_stand", "cauldron", "dragon_breath",
+                "fermented_spider_eye", "ghast_tear", "glistering_melon_slice",
+                "magma_cream", "nether_wart", "phantom_membrane",
+                "rabbit_foot"
+            ]
+        },
+        {
+            "namespace": "xmzs",
+            "prefix": "item/",
+            "values":
+            [
+                "potion", "splash_potion", "lingering_potion", "tipped_arrow"
+            ]
+        },
+        //染料
+        {
+            "prefix": "item/",
+            "suffix": "dye",
+            "values":
+            [
+                "black_", "blue_",
+                "brown_", "cyan_", "gray_",
+                "green_", "light_blue_", "light_gray_",
+                "lime_", "magenta_", "orange_",
+                "pink_", "purple_", "red_", "white_",
+                "yellow_"
+            ]
+        },
+        //种子
+        {
+            "prefix": "item/",
+            "values":
+            [
+                "beetroot_seeds", "cocoa_beans", "melon_seeds",
+                "pumpkin_seeds", "wheat_seeds", "sugar_cane"
+            ]
+        },
+        //食物
+        {
+            "prefix": "item/",
+            "values":
+            [
+                "apple", "potato", "baked_potato", "beetroot", "beetroot_soup",
+                "bread", "cake", "carrot", "cookie", "dried_kelp", "glow_berries",
+                "golden_apple", "golden_carrot", "melon_slice", "honey_bottle",
+                "poisonous_potato", "suspicious_stew", "sweet_berries",
+                "chorus_fruit", "mushroom_stew", "pumpkin_pie",
+
+                "beef", "cooked_beef", "chicken", "cooked_chicken",
+                "rabbit", "cooked_rabbit", "rabbit_stew",
+                "mutton", "cooked_mutton", "porkchop", "cooked_porkchop",
+                "cod", "cooked_cod", "salmon", "cooked_salmon",
+                "pufferfish", "tropical_fish",
+
+                "spider_eye", "rotten_flesh"
+            ]
+        },
+        //桶
+        {
+            "prefix": "item/",
+            "suffix": "bucket",
+            "values":
+            [
+                "", "water_", "axolotl_", "cod_", "pufferfish_",
+                "salmon_", "tropical_fish_", "lava_", "milk_",
+                "powder_snow_"
+            ]
+        },
+        //烟火之星、地图
+        {
+            "namespace": "xmzs",
+            "prefix": "item/",
+            "values":
+            [
+                "firework_star", "filled_map"
+            ]
+        },
+        {
+            "prefix": "item/",
+            "values": ["map"]
+        },
+        //红石
+        {
+            "prefix": "item/",
+            "values":
+            [
+                "redstone", "repeater", "comparator", "hopper"
+            ]
+        },
+        {
+            "prefix": "block/",
+            "values":
+            [
+                "redstone_torch", "redstone_block",
+                "piston_top", "piston_top_sticky",
+                "slime_block", "honey_block_bottom",
+                "observer_front", "dispenser_front",
+                "dropper_front", "lectern_top",
+                "target_top", "lever",
+                "daylight_detector_top", "daylight_detector_inverted_top",
+                "tripwire_hook", "tnt_side", "redstone_lamp",
+                "note_block"
+            ]
+        },
+        {
+            "prefix": "entity/chest/",
+            "values":
+            [
+                "normal", "trapped"
+            ]
+        },
+        {
+            "prefix": "item/",
+            "suffix": "_door",
+            "values":
+            [
+                "iron", "oak", "spruce", "birch",
+                "jungle", "acacia", "dark_oak",
+                "crimson", "warped"
+            ]
+        },
+        {
+            "namespace": "xmzs",
+            "suffix": "_generic",
+            "values":
+            [
+                "button", "pressure_plate", "trapdoor", "fencegate"
+            ]
+        },
+        //告示牌
+        {
+            "prefix": "item/",
+            "suffix": "_sign",
+            "values":
+            [
+                "oak", "spruce", "birch",
+                "jungle", "acacia", "dark_oak",
+                "crimson", "warped"
+            ]
+        },
+        //杂项
+        {
+            "prefix": "item/",
+            "values":
+            [
+                "armor_stand", "arrow", "bamboo", "barrier",
+                "bell", "blaze_powder", "blaze_rod", "bone",
+                "bone_meal", "book", "writable_book",
+                "written_book", "enchanted_book", "knowledge_book",
+                "bowl", "brick", "bundle", "bundle_filled",
+                "campfire", "soul_campfire", "charcoal", "clay_ball",
+                "clock_10", "compass_10", "egg",
+                "end_crystal", "ender_eye", "ender_pearl",
+                "experience_bottle", "feather", "fire_charge", "firework_rocket",
+                "flint", "globe_banner_pattern",
+                "ink_sac", "glow_ink_sac",
+                "item_frame", "glow_item_frame",
+                "glowstone_dust", "gunpowder",
+                "heart_of_the_sea", "honeycomb", "kelp",
+                "lantern", "soul_lantern",
+                "lead", "leather",
+                "light", "light_15",
+                "name_tag", "nautilus_shell", "nether_brick",
+                "nether_sprouts", "nether_star", "painting",
+                "paper", "pointed_dripstone", "popped_chorus_fruit",
+                "prismarine_crystals", "prismarine_shard",
+                "rabbit_hide", "scute", "seagrass", "sea_pickle",
+                "shulker_shell", "slime_ball", "snowball", "spectral_arrow",
+                "stick", "string", "structure_void", "sugar", "totem_of_undying",
+                "turtle_egg", "wheat", "chain"
+            ]
+        },
+        //药水效果
+        {
+            "prefix": "mob_effect/",
+            "values":
+            [
+                "absorption", "bad_omen", "blindness", "conduit_power",
+                "dolphins_grace", "fire_resistance", "glowing", "haste",
+                "health_boost", "hero_of_the_village", "hunger", "instant_damage",
+                "instant_health", "invisibility", "jump_boost", "levitation",
+                "luck", "mining_fatigue", "nausea", "night_vision",
+                "poison", "regeneration", "resistance", "saturation",
+                "slow_falling", "slowness", "speed", "strength",
+                "unluck", "water_breathing", "weakness", "wither"
+            ]
+        }
+    ],
+    "glyph":
+    {
+        "enabled": false,
+        "tileSize": 16,
+        "from": 0,
+        "to": 65536,
+        "pack_path": "/path/to/resourcepackRoot",
+        "fallback": "namespace:path/to/fallback/texture.png"
+    }
+}
