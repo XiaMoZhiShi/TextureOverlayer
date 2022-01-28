@@ -61,25 +61,20 @@ public class TextureGenerator
         //overlayImage.Save(texGenConfig.OutputTarget + "_OVERLAY.png");
     }
 
-    private void overlayColor(Image source, Color color, bool shouldSaveStep = false, string savePath = "")
+    private void overlayColor(Image source, Color color)
     {
         source.Mutate(x =>
         {
-            using var img = new Image<Rgba32>(source.Width, source.Height);
-            img.Mutate(xx =>
-            {
-                xx.BackgroundColor(color);
-                xx.DrawImage(source,
-                    pointTopLeft,
-                    PixelColorBlendingMode.Normal,
-                    PixelAlphaCompositionMode.DestIn,
-                    1);
-            });
+            using var img = new Image<Rgba32>(source.Width, source.Height, color);
 
-            x.DrawImage(img, pointTopLeft, PixelColorBlendingMode.Darken, 1);
-            
-            if (shouldSaveStep)
-                img.Save($"{savePath}" + Path.PathSeparator + "mask_{color}.png");
+            x.DrawImage(img,
+                pointTopLeft,
+                PixelColorBlendingMode.Multiply,
+                PixelAlphaCompositionMode.SrcAtop,
+                1);  
+
+            //x.DrawImage(img, pointTopLeft, PixelColorBlendingMode.Darken, 1);
+            //source.Save($"/dev/shm/work/" + $"mask_{color}_guid_{Guid.NewGuid()}.png");
         });
     }
 }
