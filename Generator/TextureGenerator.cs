@@ -9,7 +9,7 @@ using Point = SixLabors.ImageSharp.Point;
 
 namespace TextureOverlayer.Generator;
 
-public class GlyphGenerator
+public class TextureGenerator
 {
     public void Generate(FileConfig fileConfig)
     {
@@ -56,12 +56,12 @@ public class GlyphGenerator
                 x.DrawImage(overlayImage, pointTopLeft, texGenConfig.OverlayOpacity);
             });
         }
- 
+
         baseImage.Save(texGenConfig.OutputTarget);
         //overlayImage.Save(texGenConfig.OutputTarget + "_OVERLAY.png");
     }
 
-    private void overlayColor(Image source, Color color)
+    private void overlayColor(Image source, Color color, bool shouldSaveStep = false, string savePath = "")
     {
         source.Mutate(x =>
         {
@@ -69,13 +69,17 @@ public class GlyphGenerator
             img.Mutate(xx =>
             {
                 xx.BackgroundColor(color);
-                xx.DrawImage(source, pointTopLeft, PixelColorBlendingMode.Normal, PixelAlphaCompositionMode.DestAtop,
+                xx.DrawImage(source,
+                    pointTopLeft,
+                    PixelColorBlendingMode.Normal,
+                    PixelAlphaCompositionMode.DestIn,
                     1);
             });
 
             x.DrawImage(img, pointTopLeft, PixelColorBlendingMode.Darken, 1);
             
-            //img.Save($"/dev/shm/work/mask_{color}.png");
+            if (shouldSaveStep)
+                img.Save($"{savePath}" + Path.PathSeparator + "mask_{color}.png");
         });
     }
 }

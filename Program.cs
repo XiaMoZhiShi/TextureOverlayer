@@ -47,7 +47,7 @@ public static class Program
         var rawContent = File.ReadAllText(inputFilePath);
         var fileConfig = JsonConvert.DeserializeObject<FileConfig>(rawContent, SerializerSettings)!;
 
-        var generator = new GlyphGenerator();
+        var generator = new TextureGenerator();
         generator.Generate(fileConfig);
     }
 }
