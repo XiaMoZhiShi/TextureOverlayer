@@ -11,11 +11,8 @@ public class TexGenConfig
     [JsonProperty("base")]
     public string BasePath = string.Empty;
 
-    /// <summary>
-    /// 覆盖层图像位置（相对路径）
-    /// </summary>
-    [JsonProperty("overlay")]
-    public string OverlayPath = string.Empty;
+    [JsonProperty("overlays")]
+    public OverlayConfig[] Overlays;
 
     /// <summary>
     /// 基础图像颜色
@@ -24,22 +21,13 @@ public class TexGenConfig
     public string BaseColor = "#FFFFFF";
 
     /// <summary>
-    /// 覆盖层图像颜色
-    /// </summary>
-    [JsonProperty("overlay_color")]
-    public string OverlayColor = "#FFFFFF";
-
-    /// <summary>
-    /// 覆盖层透明度
-    /// </summary>
-    [JsonProperty("overlay_opacity")]
-    public int OverlayOpacity = 1;
-
-    /// <summary>
     /// 输出路径（相对位置）
     /// </summary>
     [JsonProperty("output_target")]
     public string OutputTarget = string.Empty;
+
+    [JsonProperty("output_targets")]
+    public string[]? OutputTargets;
 
     public override string ToString() => JsonConvert.SerializeObject(this);
 }

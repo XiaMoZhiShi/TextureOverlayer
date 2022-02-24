@@ -16,48 +16,57 @@ public class TextureGenerator
         int index = 1;
         foreach (var tgc in fileConfig.TexGenConfigs)
         {
-            Console.WriteLine($"TexGen ({index} / {fileConfig.TexGenConfigs.Length}): {tgc.BasePath}({tgc.BaseColor}) <- {tgc.OverlayPath}({tgc.OverlayColor})");
+            Console.WriteLine($"TexGen ({index} / {fileConfig.TexGenConfigs.Length}): {tgc.BasePath}({tgc.BaseColor}))");
             Generate(tgc);
             index++;
         }
     }
 
-    private readonly Point pointTopLeft = new Point
-    {
-        X = 0,
-        Y = 0
-    };
-
     public void Generate(TexGenConfig texGenConfig)
     {
         //基础图像
         var baseImage = Image.Load<Rgba32>(texGenConfig.BasePath);
-        Image<Rgba32>? overlayImage = null;
         
         //Console.WriteLine("Get BaseImage");
-
-        //覆盖层图像
-        if (!string.IsNullOrEmpty(texGenConfig.OverlayPath) && File.Exists(texGenConfig.OverlayPath))
-        {
-            //Console.WriteLine("Get Overlay");
-            overlayImage = Image.Load<Rgba32>(texGenConfig.OverlayPath);
-        }
 
         //处理基本层
         overlayColor(baseImage, Color.ParseHex(texGenConfig.BaseColor));
 
-        //处理覆盖层
-        if (overlayImage != null)
+        foreach (var overlay in texGenConfig.Overlays)
         {
-            overlayColor(overlayImage, Color.ParseHex(texGenConfig.OverlayColor));
+            //覆盖层图像
+            if (string.IsNullOrEmpty(overlay.Path) || !File.Exists(overlay.Path))
+                continue;
+            
+            Console.WriteLine($"Overlay {overlay.Path}: {overlay.Color}(X {overlay.X} | Y {overlay.Y})");
+
+            //Console.WriteLine("Get Overlay");
+            using var overlayImage = Image.Load<Rgba32>(overlay.Path);
+
+            //处理覆盖层
+            if (overlayImage == null)
+                continue;
+
+            overlayColor(overlayImage, Color.ParseHex(overlay.Color));
 
             baseImage.Mutate(x =>
             {
-                x.DrawImage(overlayImage, pointTopLeft, texGenConfig.OverlayOpacity);
+                x.DrawImage(overlayImage, new Point(overlay.X, overlay.Y), overlay.Opacity);
             });
         }
 
-        baseImage.Save(texGenConfig.OutputTarget);
+        if (texGenConfig.OutputTargets?.Length > 0 && !string.IsNullOrEmpty(texGenConfig.OutputTarget))
+            throw new InvalidOperationException("为什么要同时设置output_target和output_targets?");
+
+        if (texGenConfig.OutputTargets != null)
+        {
+            foreach (var fname in texGenConfig.OutputTargets)
+                baseImage.Save(fname);
+        }
+
+        if (!string.IsNullOrEmpty(texGenConfig.OutputTarget))
+            baseImage.Save(texGenConfig.OutputTarget);
+
         //overlayImage.Save(texGenConfig.OutputTarget + "_OVERLAY.png");
     }
 
@@ -68,7 +77,7 @@ public class TextureGenerator
             using var img = new Image<Rgba32>(source.Width, source.Height, color);
 
             x.DrawImage(img,
-                pointTopLeft,
+                new Point(0, 0),
                 PixelColorBlendingMode.Multiply,
                 PixelAlphaCompositionMode.SrcAtop,
                 1);  
