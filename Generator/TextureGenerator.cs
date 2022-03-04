@@ -58,16 +58,17 @@ public class TextureGenerator
         if (texGenConfig.OutputTargets?.Length > 0 && !string.IsNullOrEmpty(texGenConfig.OutputTarget))
             throw new InvalidOperationException("为什么要同时设置output_target和output_targets?");
 
-        if (texGenConfig.OutputTargets != null)
+        var outputTargets = texGenConfig.OutputTargets?.ToList() ?? new List<string>();
+        
+        if (texGenConfig.OutputTargets == null && !string.IsNullOrEmpty(texGenConfig.OutputTarget))
+            outputTargets.Add(texGenConfig.OutputTarget);
+
+        foreach (var fname in outputTargets)
         {
-            foreach (var fname in texGenConfig.OutputTargets)
-                baseImage.Save(fname);
+            if (!Directory.Exists(fname)) Directory.CreateDirectory(Path.GetDirectoryName(fname));
+
+            baseImage.Save(fname);   
         }
-
-        if (!string.IsNullOrEmpty(texGenConfig.OutputTarget))
-            baseImage.Save(texGenConfig.OutputTarget);
-
-        //overlayImage.Save(texGenConfig.OutputTarget + "_OVERLAY.png");
     }
 
     private void overlayColor(Image source, Color color)
